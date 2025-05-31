@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import History from './pages/History';
 import NotFound from './pages/NotFound';
+import Histories from './pages/Histories';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/history/:historyId/:date" element={<History />} />
+            <Route path="/history" element={<Histories/>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
