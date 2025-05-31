@@ -1,0 +1,7 @@
+## One-shot prompt
+
+Create a frontend-only React.js application with Tailwind CSS that sends bulk emails (100–200 at a time) using EmailJS, and saves the sent email history in Appwrite Database. No backend or authentication. The UI should have a form to input: Sender’s Name, Subject, Message, and multiple Email Addresses (entered comma-separated or space-separated). Each email must be sent individually to each recipient using EmailJS (with inbox-safe delivery if possible). After sending, save the following in Appwrite Database: a random historyId, the current date (YYYY-MM-DD), subject, message, sender name, and recipient emails as an array.
+
+Allow anyone to view email history using a public shareable link like `/history/abc123xyz/2025-05-31`. When someone visits such a link, display all emails and messages sent under that historyId for that day. Use React Router DOM for routing. Structure the project with components: EmailForm.jsx (form + sending), HistoryViewer.jsx (fetch + display from Appwrite), and a utils.js file with helper functions like `generateRandomId()` and `formatDate()`. Initialize and configure Appwrite in a `lib/appwrite.js` file.
+
+Make the UI clean and responsive with Tailwind CSS. Include proper loading and error states. Allow users to copy the public shareable link after sending emails. Add Firebase-like unique ID generation if needed for the historyId. No authentication, no backend server. Use only free and public-facing services. The final app should be deployable to Netlify or Vercel.
