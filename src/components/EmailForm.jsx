@@ -28,7 +28,7 @@ const EmailForm = () => {
 
     try {
       // Send emails using backend
-      const response = await fetch("http://localhost:5000/send-emails", {
+      const response = await fetch("https://bulk-email-sender-three.vercel.app/send-emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
