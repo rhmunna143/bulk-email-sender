@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import dayjs from "dayjs";
 import { saveEmailHistory } from "../lib/appwrite";
 import { generateRandomId } from "../utils/utils";
 
@@ -23,7 +24,7 @@ const EmailForm = () => {
 
     const emailArray = emails.split(/[\s,]+/).filter((email) => email.trim() !== "");
     const historyId = generateRandomId();
-    const currentDate = new Date().toISOString().split("T")[0];
+    const currentDate = dayjs().format("YYYY-MM-DD");
 
     try {
       // Send emails using backend
